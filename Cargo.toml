@@ -1,0 +1,17 @@
+[package]
+name = "notes_app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4.0.0"         # Web framework
+actix-rt = "2.7.0"          # Runtime for Actix applications
+serde = { version = "1.0", features = ["derive"] }  # Serialization library
+serde_json = "1.0"          # JSON handling
+diesel = { version = "2.0", features = ["postgres", "r2d2"] } # ORM for database
+dotenvy = "0.15"            # Environment variable handling
+uuid = { version = "1.0", features = ["v4"] }       # Unique identifier for notes
+thiserror = "1.0"           # Error handling
+
+[build-dependencies]
+diesel_cli = { version = "2.0", features = ["postgres"] }
